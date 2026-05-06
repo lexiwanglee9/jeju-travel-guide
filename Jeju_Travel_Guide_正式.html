@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>濟州島 5天4夜 旅遊手冊 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --teal:        #1c5e5c;
+  --teal-mid:    #2a7a78;
+  --teal-light:  #3d9a98;
+  --teal-pale:   #e4f4f3;
+  --coral:       #e8553b;
+  --coral-light: #f07a64;
+  --amber:       #f5a623;
+  --white:       #ffffff;
+  --bg:          #f4f8f7;
+  --card:        #ffffff;
+  --border:      #cde5e4;
+  --text:        #1a2e2d;
+  --text-mid:    #3d5a58;
+  --text-soft:   #6b8a88;
+  --shadow:      0 2px 12px rgba(28,94,92,.10);
+  --shadow-lg:   0 6px 28px rgba(28,94,92,.14);
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+/* ── Sticky Nav ── */
+.nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--teal);
+  display: flex; gap: 2px;
+  padding: 8px 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 3px solid var(--coral);
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  flex-shrink: 0;
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-size: 12.5px; font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 20px;
+  transition: background .2s, color .2s;
+  white-space: nowrap;
+}
+.nav a:hover { background: rgba(255,255,255,.18); color: #fff; }
+
+/* ── COVER ── */
+.cover {
+  background: var(--teal);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  position: relative;
+  overflow: hidden;
+}
+.cover::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(61,154,152,.25) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cover-left {
+  padding: 64px 52px 80px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  position: relative; z-index: 2;
+}
+.cover-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(255,255,255,.5); margin-bottom: 20px;
+}
+.cover-nights {
+  font-size: 76px; font-weight: 900; color: #fff; line-height: 1;
+  letter-spacing: -3px;
+}
+.cover-jeju-en {
+  font-family: 'Playfair Display', serif;
+  font-size: 58px; font-weight: 700; color: #fff;
+  letter-spacing: 10px; margin-top: 6px;
+}
+.cover-jeju-zh {
+  font-size: 22px; font-weight: 700; color: var(--coral-light);
+  letter-spacing: 6px; margin-top: 4px;
+}
+.cover-sub { font-size: 15px; color: rgba(255,255,255,.55); margin-top: 10px; }
+.cover-meta { margin-top: 40px; }
+.cover-meta-label { font-size: 11px; letter-spacing: 2px; color: rgba(255,255,255,.45); text-transform: uppercase; }
+.cover-meta-date { font-size: 18px; font-weight: 700; color: #fff; margin-top: 3px; }
+.cover-hotel { font-size: 13px; color: rgba(255,255,255,.65); margin-top: 8px; }
+.cover-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.cover-tag {
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  color: #fff; font-size: 12px; padding: 5px 13px; border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+.cover-right {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 2;
+}
+.cover-emoji {
+  font-size: 160px;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,.3));
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-18px); }
+}
+.cover-wave {
+  position: absolute; bottom: -1px; left: 0; right: 0;
+  height: 72px; background: var(--bg);
+  clip-path: ellipse(58% 100% at 50% 100%);
+}
+
+/* ── Section wrappers ── */
+.section-wrap { max-width: 1120px; margin: 0 auto; padding: 0 36px; }
+
+/* ── Day header band ── */
+.day-band {
+  background: var(--teal);
+  padding: 48px 36px 36px;
+  position: relative; overflow: hidden;
+}
+.day-band::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: rgba(255,255,255,.04);
+  border-radius: 50%;
+}
+.day-band-inner { max-width: 1120px; margin: 0 auto; }
+.day-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--coral); color: #fff;
+  font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  padding: 5px 16px; border-radius: 20px; margin-bottom: 14px;
+}
+.day-band h2 {
+  font-size: 32px; font-weight: 900; color: #fff; line-height: 1.2;
+}
+.day-band-date { font-size: 14px; color: rgba(255,255,255,.55); margin-top: 5px; }
+
+/* ── Overview ── */
+.overview-band { background: var(--teal); padding: 56px 36px; }
+.overview-title {
+  font-size: 24px; font-weight: 900; color: #fff;
+  display: flex; align-items: center; gap: 10px;
+  max-width: 1120px; margin: 0 auto 28px;
+}
+.overview-grid {
+  display: grid; grid-template-columns: repeat(5,1fr); gap: 14px;
+  max-width: 1120px; margin: 0 auto;
+}
+.ov-card {
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.16);
+  border-radius: 14px; padding: 20px 14px; text-align: center;
+  transition: transform .2s, background .2s;
+  cursor: default;
+}
+.ov-card:hover { transform: translateY(-4px); background: rgba(255,255,255,.18); }
+.ov-num { font-size: 10px; font-weight: 800; letter-spacing: 2px; color: rgba(255,255,255,.5); text-transform: uppercase; }
+.ov-icon { font-size: 34px; margin: 8px 0; }
+.ov-date { font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 5px; }
+.ov-desc { font-size: 11.5px; color: rgba(255,255,255,.6); line-height: 1.4; }
+.hotel-row {
+  max-width: 1120px; margin: 20px auto 0;
+  background: rgba(255,255,255,.1); border-radius: 10px;
+  padding: 13px 20px; color: rgba(255,255,255,.8); font-size: 13.5px;
+  display: flex; align-items: center; gap: 10px;
+}
+
+/* ── Two-column layout ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 36px; }
+
+/* ── Timeline ── */
+.timeline { display: flex; flex-direction: column; }
+.tl-item { display: grid; grid-template-columns: 68px 1fr; position: relative; }
+.tl-item::before {
+  content: ''; position: absolute;
+  left: 34px; top: 44px; bottom: -6px;
+  width: 2px; background: var(--border);
+}
+.tl-item:last-child::before { display: none; }
+.tl-time { padding: 14px 6px 14px 0; text-align: right; position: relative; z-index: 1; }
+.tl-time-label { font-size: 12px; font-weight: 800; color: var(--teal-mid); white-space: nowrap; }
+.tl-dot {
+  width: 9px; height: 9px; background: var(--teal-light); border-radius: 50%;
+  margin: 5px auto 0; border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--teal-light);
+}
+.tl-body { padding: 10px 0 10px 20px; }
+.tl-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 11px; padding: 13px 16px;
+  box-shadow: var(--shadow);
+  transition: box-shadow .2s, transform .15s;
+}
+.tl-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.tl-card.accent { border-left: 4px solid var(--coral); }
+.tl-card.amber  { border-left: 4px solid var(--amber); }
+.tl-card.depart { border-left: 4px solid var(--coral); background: #fff8f6; }
+.tl-title { font-size: 14px; font-weight: 700; color: var(--text); }
+.tl-addr  { font-size: 11.5px; color: var(--text-soft); margin-top: 2px; line-height: 1.4; }
+.badge {
+  display: inline-block; font-size: 10.5px; font-weight: 700;
+  padding: 2px 10px; border-radius: 10px; margin-top: 6px;
+}
+.badge-choice { background: var(--amber); color: #fff; }
+.badge-must   { background: var(--coral); color: #fff; }
+
+/* ── Side panel ── */
+.side-panel { display: flex; flex-direction: column; gap: 18px; }
+
+/* ── Choice section ── */
+.choice-box {
+  background: var(--bg); border-radius: 14px; padding: 22px;
+}
+.choice-box-title {
+  font-size: 15px; font-weight: 900; color: var(--text);
+  margin-bottom: 16px; display: flex; align-items: center; gap: 7px;
+}
+.choice-cards-col { display: flex; flex-direction: column; gap: 11px; }
+.choice-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+
+.c-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 11px; padding: 15px; position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.c-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.c-card.featured { border: 2px solid var(--coral); }
+.c-featured-badge {
+  position: absolute; top: -9px; right: 10px;
+  background: var(--coral); color: #fff;
+  font-size: 10px; font-weight: 800; padding: 2px 11px; border-radius: 10px;
+}
+.c-name { font-size: 14px; font-weight: 800; color: var(--text); }
+.c-kr   { font-size: 11px; color: var(--text-soft); margin-bottom: 5px; }
+.c-type {
+  display: inline-block; background: var(--teal); color: #fff;
+  font-size: 10.5px; padding: 1px 9px; border-radius: 8px; margin-bottom: 8px;
+}
+.c-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.5; }
+.c-addr { font-size: 11px; color: var(--text-soft); margin-top: 7px; }
+
+/* ── Must list ── */
+.must-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 14px; }
+.must-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 13px 8px; text-align: center;
+}
+.must-icon { font-size: 22px; margin-bottom: 5px; }
+.must-name { font-size: 11.5px; font-weight: 700; }
+.must-kr   { font-size: 10px; color: var(--text-soft); margin-top: 1px; }
+
+/* ── Highlight cards ── */
+.hl-cards { display: flex; flex-direction: column; gap: 11px; }
+.hl-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 11px; padding: 15px;
+}
+.hl-card.warn { border: 2px solid var(--coral); }
+.hl-title { font-size: 14px; font-weight: 800; color: var(--text); }
+.hl-kr    { font-size: 11px; color: var(--text-soft); margin-bottom: 6px; }
+.hl-desc  { font-size: 12.5px; color: var(--text-mid); line-height: 1.5; }
+.hl-addr  { font-size: 11px; color: var(--text-soft); margin-top: 6px; }
+.hl-dur {
+  display: inline-block; background: var(--teal-pale); color: var(--teal-mid);
+  font-size: 11.5px; font-weight: 700; padding: 2px 10px; border-radius: 8px; margin-top: 7px;
+}
+.hl-dur.warn { background: #fff0ed; color: var(--coral); }
+
+/* ── Shopping / Market grid ── */
+.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.shop-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 13px;
+}
+.shop-ico { font-size: 22px; flex-shrink: 0; }
+.shop-name { font-size: 13px; font-weight: 700; }
+.shop-desc { font-size: 11.5px; color: var(--text-mid); margin-top: 2px; }
+
+/* ── Day 4 market tags ── */
+.tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.tag {
+  background: var(--teal-pale); color: var(--teal); 
+  font-size: 12px; padding: 3px 12px; border-radius: 9px; font-weight: 500;
+}
+
+/* ── Dark info card (day 5 right side) ── */
+.dark-card {
+  background: linear-gradient(135deg, var(--teal), var(--teal-mid));
+  border-radius: 14px; padding: 24px; color: #fff;
+}
+.dark-card-title { font-size: 16px; font-weight: 800; margin-bottom: 15px; }
+.dark-item { display: flex; gap: 13px; align-items: flex-start; margin-bottom: 11px; }
+.dark-icon {
+  background: rgba(255,255,255,.15); border-radius: 8px;
+  padding: 8px 10px; font-size: 18px; flex-shrink: 0;
+}
+.dark-item-name { font-size: 13.5px; font-weight: 700; }
+.dark-item-desc { font-size: 11.5px; opacity: .65; margin-top: 1px; }
+
+/* ── Alert box ── */
+.alert-box {
+  border: 2px solid var(--coral); border-radius: 13px;
+  padding: 18px; background: #fff8f6; margin-top: 16px;
+}
+.alert-title { font-size: 14px; font-weight: 800; color: var(--coral); margin-bottom: 9px; }
+.alert-item { display: flex; gap: 7px; font-size: 12.5px; color: var(--text-mid); margin-bottom: 5px; }
+.alert-dot { color: var(--coral); }
+
+/* ── Tip box ── */
+.tip {
+  background: var(--teal-pale); border-left: 4px solid var(--teal-mid);
+  border-radius: 0 10px 10px 0; padding: 11px 16px;
+  font-size: 12.5px; color: var(--teal); line-height: 1.6;
+  margin-top: 14px;
+}
+
+/* ── Route bar ── */
+.route {
+  background: var(--teal); border-radius: 10px;
+  padding: 12px 18px; color: rgba(255,255,255,.9);
+  font-size: 12.5px; margin-top: 20px;
+  display: flex; align-items: flex-start; gap: 8px;
+}
+
+/* ── Tips page ── */
+.tips-band { background: var(--teal); padding: 56px 36px 64px; }
+.tips-title {
+  font-size: 24px; font-weight: 900; color: #fff;
+  max-width: 1120px; margin: 0 auto 28px;
+  display: flex; align-items: center; gap: 10px;
+}
+.tips-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 15px;
+  max-width: 1120px; margin: 0 auto;
+}
+.tip-card {
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.16);
+  border-radius: 13px; padding: 22px;
+}
+.tip-icon { font-size: 30px; margin-bottom: 9px; }
+.tip-name { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+.tip-desc { font-size: 12.5px; color: rgba(255,255,255,.68); line-height: 1.5; }
+
+/* ── Footer ── */
+.footer {
+  background: var(--coral); padding: 28px 36px;
+  text-align: center; color: #fff; font-size: 18px; font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ── Divider ── */
+.divider { height: 6px; background: linear-gradient(90deg, var(--teal), var(--teal-light), var(--coral)); }
+
+/* ── Page padding ── */
+.page { padding: 44px 36px 52px; max-width: 1120px; margin: 0 auto; }
+
+@media (max-width: 780px) {
+  .cover { grid-template-columns: 1fr; }
+  .cover-emoji { font-size: 100px; }
+  .overview-grid { grid-template-columns: repeat(3,1fr); }
+  .two-col { grid-template-columns: 1fr; }
+  .choice-cards-grid { grid-template-columns: 1fr; }
+  .must-grid { grid-template-columns: repeat(2,1fr); }
+  .tips-grid { grid-template-columns: 1fr 1fr; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .cover-nights { font-size: 56px; }
+  .cover-jeju-en { font-size: 40px; letter-spacing: 6px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#cover">🏝️ 封面</a>
+  <a href="#overview">📅 總覽</a>
+  <a href="#day1">Day 1 涯月</a>
+  <a href="#day1-detail">Day 1 咖啡廳</a>
+  <a href="#day2">Day 2 翰林</a>
+  <a href="#day2-detail">Day 2 烤肉</a>
+  <a href="#day3">Day 3 西歸浦</a>
+  <a href="#day3-detail">Day 3 橘子廳</a>
+  <a href="#day4">Day 4 牛島</a>
+  <a href="#day4-detail">Day 4 下午</a>
+  <a href="#day5">Day 5 返台</a>
+  <a href="#tips">✈️ 貼士</a>
+</nav>
+
+<!-- ════════════════════════════════════════ COVER -->
+<section id="cover" class="cover">
+  <div class="cover-left">
+    <div>
+      <div class="cover-eyebrow">2025 · 5月 · 濟州島旅遊手冊</div>
+      <div class="cover-nights">5 天<br>4 夜</div>
+      <div class="cover-jeju-en">JEJU</div>
+      <div class="cover-jeju-zh">濟州島</div>
+      <div class="cover-sub">旅遊手冊</div>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-label">行程日期</div>
+      <div class="cover-meta-date">2025 / 5 / 14（四）— 5 / 18（一）</div>
+      <div class="cover-hotel">🏨 Jeju Sorang in Farms Village · 翰林邑</div>
+      <div class="cover-tags">
+        <span class="cover-tag">✈️ 機場 09:45</span>
+        <span class="cover-tag">🍖 黑豬肉</span>
+        <span class="cover-tag">☕ 海景咖啡</span>
+        <span class="cover-tag">🌊 涯月</span>
+        <span class="cover-tag">🐄 牛島</span>
+        <span class="cover-tag">🍵 綠茶園</span>
+      </div>
+    </div>
+  </div>
+  <div class="cover-right">
+    <div class="cover-emoji">🏝️</div>
+  </div>
+  <div class="cover-wave"></div>
+</section>
+
+<!-- ════════════════════════════════════════ OVERVIEW -->
+<section id="overview" class="overview-band">
+  <div class="overview-title">📅 行程總覽</div>
+  <div class="overview-grid">
+    <div class="ov-card"><div class="ov-num">Day 1</div><div class="ov-icon">🛬</div><div class="ov-date">5/14（四）</div><div class="ov-desc">抵達 · 涯月邑</div></div>
+    <div class="ov-card"><div class="ov-num">Day 2</div><div class="ov-icon">🌿</div><div class="ov-date">5/15（五）</div><div class="ov-desc">翰林 · 綠茶園</div></div>
+    <div class="ov-card"><div class="ov-num">Day 3</div><div class="ov-icon">🌊</div><div class="ov-date">5/16（六）</div><div class="ov-desc">西歸浦 · 柱狀節理</div></div>
+    <div class="ov-card"><div class="ov-num">Day 4</div><div class="ov-icon">🐄</div><div class="ov-date">5/17（日）</div><div class="ov-desc">牛島 · 月汀里</div></div>
+    <div class="ov-card"><div class="ov-num">Day 5</div><div class="ov-icon">✈️</div><div class="ov-date">5/18（一）</div><div class="ov-desc">市區 · 返台</div></div>
+  </div>
+  <div class="hotel-row">🏨 住宿：Jeju Sorang in Farms Village（全程）｜翰林邑 Gwideok 7-gil</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ DAY 1 MAIN -->
+<section id="day1">
+  <div class="day-band">
+    <div class="day-band-inner">
+      <div class="day-pill">DAY 1</div>
+      <h2>抵達濟州 → 涯月邑探索</h2>
+      <div class="day-band-date">5/14（四）</div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="two-col">
+      <!-- Timeline -->
+      <div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time"><div class="tl-time-label">09:45</div><div class="tl-dot"></div></div>
+            <div class="tl-body"><div class="tl-card"><div class="tl-title">🛬 濟州機場降落</div><div class="tl-addr">入境 · 取行李 · 前往飯店寄放行李</div></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time"><div class="tl-time-label">11:30</div><div class="tl-dot"></div></div>
+            <div class="tl-body"><div class="tl-card"><div class="tl-title">🍽️ 早午餐</div><div class="tl-addr">帶魚料理宮 탑동본점 · 제주시 탑동로 11길 6</div><span class="badge badge-choice">★ 選擇</span></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time"><div class="tl-time-label">13:00</div><div class="tl-dot"></div></div>
+            <div class="tl-body"><div class="tl-card"><div class="tl-title">🛍️ 寶健路逛街</div><div class="tl-addr">伴手禮 · 鞋子 · 服飾｜ABC마트 제주 노연로 95</div></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time"><div class="tl-time-label">14:30</div><div class="tl-dot"></div></div>
+            <div class="tl-body"><div class="tl-card accent"><div class="tl-title">☕ 海景咖啡廳（三選一）</div><div class="tl-addr">SLOWBOAT / HaruFilm / Team Blow（推薦！夕陽海景）</div><span class="badge badge-choice">★ 選擇</span></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time"><div class="tl-time-label">18:30</div><div class="tl-dot"></div></div>
+            <div class="tl-body"><div class="tl-card"><div class="tl-title">🌊 漢潭海岸步道</div><div class="tl-addr">한담해안산책로 · 涯月邑海岸散步</div></div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time"><div class="tl-time-label">19:15</div><div class="tl-dot"></div></div>
+            <div class="tl-body"><div class="tl-card"><div class="tl-title">🍜 晚餐</div><div class="tl-addr">애월온기 鮑魚粥 / 海鮮拉麵 · 濟州韓面家 豬肉湯飯</div><span class="badge badge-choice">★ 選擇</span></div></div>
+          </div>
+        </div>
+        <div class="tip">💡 Team Blow（팀블로우）夕陽橘色海景一流，本行程最推薦打卡！飯店 check-in 後再出發涯月。</div>
+      </div>
+
+      <!-- Side panel -->
+      <div class="side-panel">
+        <div class="choice-box">
+          <div class="choice-box-title">☕ 涯月邑咖啡廳選擇指南</div>
+          <div class="choice-cards-col">
+            <div class="c-card"><div class="c-name">SLOWBOAT</div><div class="c-kr">슬로우보트</div><span class="c-type">咖啡廳</span><div class="c-desc">安靜文藝有書有海。適合一個人靜靜看海的氛圍感咖啡廳，海景絕美。</div><div class="c-addr">📍 애월읍 하귀1리 330</div></div>
+            <div class="c-card"><div class="c-name">HaruFilm Jeju</div><div class="c-kr">하루필름 애월</div><span class="c-type">咖啡廳</span><div class="c-desc">解鎖看海景的另一種方式，氛圍感十足。</div><div class="c-addr">📍 애월읍 애월해안로 672 1층</div></div>
+            <div class="c-card featured"><span class="c-featured-badge">⭐ 強推！</span><div class="c-name">Team Blow</div><div class="c-kr">팀블로우</div><span class="c-type">咖啡廳</span><div class="c-desc">點一杯果汁靜靜等待橘子落日海，chill 到不想走，本次行程最愛一站！</div><div class="c-addr">📍 애월읍 애월로19-5 1층</div></div>
+          </div>
+        </div>
+        <div class="choice-box">
+          <div class="choice-box-title">🛍️ 涯月邑必逛清單</div>
+          <div class="must-grid">
+            <div class="must-card"><div class="must-icon">🍦</div><div class="must-name">염전의봄</div><div class="must-kr">鹽麵包冰淇淋</div></div>
+            <div class="must-card"><div class="must-icon">🛍️</div><div class="must-name">Mumu Jeju</div><div class="must-kr">文創選物店</div></div>
+            <div class="must-card"><div class="must-icon">🐰</div><div class="must-name">gyul gyul</div><div class="must-kr">米菲兔周邊</div></div>
+            <div class="must-card"><div class="must-icon">💐</div><div class="must-name">ASSISI</div><div class="must-kr">精品香水店</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="route">📍 建議路線：機場 → 탑동早午餐 → 寶健路逛街 → 涯月邑（步道＋咖啡廳＋晚餐）→ 飯店 Check-in</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ DAY 2 MAIN -->
+<section id="day2">
+  <div class="day-band">
+    <div class="day-band-inner">
+      <div class="day-pill">DAY 2</div>
+      <h2>狹才海灘 → 翰林 → 綠茶博物館</h2>
+      <div class="day-band-date">5/15（五）</div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="two-col">
+      <div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">08:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🌅 狹才海水浴場</div><div class="tl-addr">清晨無人海灘，絕美晨光 · 看海拍照</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">09:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🥐 早餐</div><div class="tl-addr">舒芙蕾TRIBE 애월로 11 / rnr bakery 麵包店 협재</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">10:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">👗 古著小店逛逛</div><div class="tl-addr">제주시 한림읍 한림로 372-7</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">11:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card accent"><div class="tl-title">🐙 午餐：명자 Myeongja（推薦）</div><div class="tl-addr">章魚五花肉蓋飯 · 애월로1길 22 必吃！</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">12:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🌴 翰林公園</div><div class="tl-addr">熱帶植物 · 鐘乳石洞 · 逛逛拍照</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">14:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🍵 雪綠茶博物館（O'Sulloc）</div><div class="tl-addr">參觀茶園 · 試飲 · 紀念品選購</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">16:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">💨 風車海岸</div><div class="tl-addr">海岸風力發電機 · 看海拍照</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">18:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🥩 晚餐（三選一）</div><div class="tl-addr">뚱딴지 黑豬烤肉 / 흑돈시 韓式烤肉 / 돈해상 海景烤肉</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+        </div>
+        <div class="tip">💡 O'Sulloc 附近有흑돈시烤肉，可串聯。翰林公園→ O'Sulloc → 風車海岸 路線流暢，建議開車前往。</div>
+      </div>
+
+      <div class="side-panel">
+        <div class="choice-box">
+          <div class="choice-box-title">🥩 晚餐烤肉選擇</div>
+          <div class="choice-cards-col">
+            <div class="c-card"><div class="c-name">뚱딴지 ttungttanji</div><div class="c-kr">黑豬烤肉</div><span class="c-type">黑豬烤肉</span><div class="c-desc">環境熱鬧，份量十足。人均 ₩1,000+</div><div class="c-addr">📍 애월읍 부룡수길 17</div></div>
+            <div class="c-card"><div class="c-name">흑돈시 백돈면</div><div class="c-kr">韓式烤肉</div><span class="c-type">韓式烤肉</span><div class="c-desc">在綠茶博物館附近，方便串聯行程，不需移動太遠。</div><div class="c-addr">📍 안덕면 중산간서로 1769 2동</div></div>
+            <div class="c-card featured"><span class="c-featured-badge">⭐ 推薦</span><div class="c-name">돈해상</div><div class="c-kr">海景烤肉</div><span class="c-type">海景烤肉</span><div class="c-desc">一邊烤肉一邊看海！景色絕佳，預約制建議提前訂位。</div><div class="c-addr">📍 한림읍 귀덕11길 39</div></div>
+          </div>
+        </div>
+        <div class="choice-box">
+          <div class="choice-box-title">🌟 Day 2 景點亮點</div>
+          <div class="hl-cards">
+            <div class="hl-card"><div class="hl-title">🏖️ 狹才海水浴場</div><div class="hl-desc">清晨空曠，玄武岩海岸，是拍照勝地</div></div>
+            <div class="hl-card"><div class="hl-title">🌴 翰林公園</div><div class="hl-desc">濟州最大植物公園，含鐘乳石洞穴</div></div>
+            <div class="hl-card"><div class="hl-title">🍵 O'Sulloc 茶博物館</div><div class="hl-desc">綠茶產地 · 最知名景點之一 · 附設茶飲</div></div>
+            <div class="hl-card"><div class="hl-title">💨 風車海岸</div><div class="hl-desc">壯觀風機與海景，日落絕景</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="route">📍 建議路線：飯店 → 狹才海灘 → 早餐 → 古著店 → 午餐명자 → 翰林公園 → O'Sulloc → 風車海岸 → 烤肉晚餐</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ DAY 3 MAIN -->
+<section id="day3">
+  <div class="day-band">
+    <div class="day-band-inner">
+      <div class="day-pill">DAY 3</div>
+      <h2>西歸浦 · 柱狀節理 · 市場逛街</h2>
+      <div class="day-band-date">5/16（六）</div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="two-col">
+      <div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">10:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🦔 早餐：海膽拌飯</div><div class="tl-addr">제주해조네보말성게전문점 · 안덕면 대평감산로 12</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">11:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">☕ 橘子咖啡廳</div><div class="tl-addr">Ruddy's / 橘花閣樓귤꽃다락 / Gamtta Nam / Cafe Tangerine</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">12:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🪨 柱狀節理帶</div><div class="tl-addr">大自然熔岩柱景觀 · 서귀포시 대포동</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">13:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🛒 西歸浦偶來市場</div><div class="tl-addr">在地市場逛逛 · 購買特産</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">15:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🛍️ Olive Young + E-mart</div><div class="tl-addr">美妝藥妝 · 零食伴手禮採購</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">16:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card accent"><div class="tl-title">🐟 晚餐</div><div class="tl-addr">만선식당 韓式生魚片 · 국수바다 麵之海（必吃！）</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">17:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🚗 回飯店方向</div><div class="tl-addr">沿翰林邑方向返回</div></div></div></div>
+        </div>
+        <div class="tip">💡 국수바다（麵之海）是西歸浦人氣麵店，建議提早排隊。Olive Young / E-mart 可在偶來市場後一併採購。</div>
+      </div>
+
+      <div class="side-panel">
+        <div class="choice-box">
+          <div class="choice-box-title">🍊 橘子咖啡廳選擇</div>
+          <div class="choice-cards-grid">
+            <div class="c-card"><div class="c-name">Ruddy's</div><span class="c-type">咖啡廳</span><div class="c-desc">簡約時尚咖啡廳</div><div class="c-addr">📍 서귀포시 강정동 708</div></div>
+            <div class="c-card"><div class="c-name">橘花閣樓</div><div class="c-kr">귤꽃다락</div><span class="c-type">橘子主題</span><div class="c-desc">濟州橘子主題，裝潢精緻</div><div class="c-addr">📍 서귀포시 이어도로1027번길</div></div>
+            <div class="c-card"><div class="c-name">Gamtta Nam</div><span class="c-type">網紅打卡</span><div class="c-desc">網紅橘子咖啡廳，必拍打卡點</div><div class="c-addr">📍 강정동 1890-2</div></div>
+            <div class="c-card"><div class="c-name">Cafe Tangerine</div><span class="c-type">橘子主題</span><div class="c-desc">橘花閣樓風格，夢幻橘子空間</div><div class="c-addr">📍 서귀포시 이어도로1027번길 34</div></div>
+          </div>
+        </div>
+        <div class="choice-box">
+          <div class="choice-box-title">🛍️ 西歸浦採購清單</div>
+          <div class="shop-grid">
+            <div class="shop-item"><div class="shop-ico">🧴</div><div><div class="shop-name">Olive Young</div><div class="shop-desc">韓系美妝 · 護膚 · 保養品</div></div></div>
+            <div class="shop-item"><div class="shop-ico">🧇</div><div><div class="shop-name">E-mart</div><div class="shop-desc">零食 · 泡麵 · 伴手禮批發</div></div></div>
+            <div class="shop-item"><div class="shop-ico">🦑</div><div><div class="shop-name">偶來市場</div><div class="shop-desc">在地小吃 · 新鮮海產</div></div></div>
+            <div class="shop-item"><div class="shop-ico">🍊</div><div><div class="shop-name">橘子伴手禮</div><div class="shop-desc">果凍 / 巧克力 / 果乾</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="route">📍 建議路線：飯店 → 海膽早餐 → 橘子咖啡廳 → 柱狀節理帶 → 偶來市場 → Olive Young/E-mart → 晚餐 → 回飯店</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ DAY 4 MAIN -->
+<section id="day4">
+  <div class="day-band">
+    <div class="day-band-inner">
+      <div class="day-pill">DAY 4</div>
+      <h2>牛島半日遊 → 涉地可支 → 月汀里</h2>
+      <div class="day-band-date">5/17（日）</div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="two-col">
+      <div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">07:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🚢 城山浦口 → 牛島渡輪</div><div class="tl-addr">成人來回 10,500 韓元｜航程約 15 分鐘｜07:00 開始營運</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">08:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🏝️ 牛島探索（騎自行車/電瓶車）</div><div class="tl-addr">우도해안길 環島一圈 · 碧藍海水 · 白沙灘</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">10:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🍳 牛島午餐</div><div class="tl-addr">Sumsonai 섬소나이 / On-off 炸豬排</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">12:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card accent"><div class="tl-title">🥜 牛島花生冰淇淋（必吃！）</div><div class="tl-addr">peanut icecream beer gift store 연평리 1194-3</div><span class="badge badge-must">★ 必吃</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">13:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card amber"><div class="tl-title">⛵ 末班船回本島</div><div class="tl-addr">⚠️ 注意末班船 16:00–17:30，建議 13:00 回程</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">14:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🌿 涉地可支</div><div class="tl-addr">섭지코지 · 성산읍 섭지코지로 107 · 海岸散步拍照</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">16:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🏖️ 月汀里海邊</div><div class="tl-addr">구좌읍 해맞이해안로 485 · 網紅衝浪海邊逛逛</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">19:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">♨️ 汗蒸幕</div><div class="tl-addr">도두해수파크 · 제주시 서해안로 236</div></div></div></div>
+        </div>
+        <div class="tip">💡 牛島末班船務必留意時間！建議 13:00 搭船回程，下午安排涉地可支 ＋ 月汀里 ＋ London Bagel。</div>
+      </div>
+
+      <div class="side-panel">
+        <div class="choice-box">
+          <div class="choice-box-title">🌊 下午景點亮點</div>
+          <div class="hl-cards">
+            <div class="hl-card"><div class="hl-title">涉地可支 섭지코지</div><div class="hl-desc">濟州東海岸最美海岸步道，玄武岩 · 燈塔 · 壯闊海景</div><div class="hl-addr">📍 성산읍 섭지코지로 107</div><span class="hl-dur">⏱ 約 60–90 分鐘</span></div>
+            <div class="hl-card"><div class="hl-title">月汀里海邊 월정리</div><div class="hl-desc">網紅衝浪海邊，透明藍綠色海水，美拍佳地，沿岸小店咖啡廳林立</div><div class="hl-addr">📍 구좌읍 해맞이해안로 485</div><span class="hl-dur">⏱ 約 60 分鐘</span></div>
+            <div class="hl-card warn"><div class="hl-title">London Bagel Museum</div><div class="hl-desc">人氣排隊貝果名店，⚠️ 營業至 18:00，勿太晚！</div><div class="hl-addr">📍 구좌읍 동복로 85</div><span class="hl-dur warn">注意 18:00 打烊</span></div>
+          </div>
+        </div>
+        <div class="choice-box">
+          <div class="choice-box-title">🍢 東門市場晚餐</div>
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:11px; padding:16px;">
+            <div style="font-size:14px; font-weight:700; margin-bottom:3px;">제주 동문재래시장</div>
+            <div style="font-size:11.5px; color:var(--text-soft); margin-bottom:10px;">제주시 관덕로 14길 · 濟州最大傳統市場</div>
+            <div class="tag-row">
+              <span class="tag">海產炒飯</span>
+              <span class="tag">橘子紅豆餅</span>
+              <span class="tag">各式街邊小吃</span>
+              <span class="tag">生猛海鮮</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="route">📍 建議路線：城山浦口 → 牛島半日遊 → 涉地可支 → 月汀里 → London Bagel → 東門市場晚餐 → 飯店</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ DAY 5 -->
+<section id="day5">
+  <div class="day-band">
+    <div class="day-band-inner">
+      <div class="day-pill">DAY 5</div>
+      <h2>市區採購 · 醫美 · 22:15 回台灣</h2>
+      <div class="day-band-date">5/18（一）</div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="two-col">
+      <div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">08:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🍞 早餐</div><div class="tl-addr">Isaac Toast 노연로 43 / 돈독치기 拌飯 / 함덕연옥 石鍋飯</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">09:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🏘️ 민속촌 民俗村參觀</div><div class="tl-addr">傳統濟州石牆村落文化體驗</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">11:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🌲 山君不離 산굼부리</div><div class="tl-addr">神秘森林步道 · 火山口景觀 · 拍照散步</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">12:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">☕ 藍瓶咖啡 Blue Bottle</div><div class="tl-addr">구좌읍 번영로 2133-30 · 必打卡</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">13:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card accent"><div class="tl-title">🥩 午餐：黑豬＆海鮮街</div><div class="tl-addr">濟州市黑豬肉一條街，旅程壓軸！</div><span class="badge badge-choice">★ 選擇</span></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">16:00</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card amber"><div class="tl-title">💉 醫美 Nowmedi（固定行程）</div><div class="tl-addr">濟州市 연북로 511 APLEX大廈 3層｜請提前預約</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">18:30</div><div class="tl-dot"></div></div><div class="tl-body"><div class="tl-card"><div class="tl-title">🛍️ 市區最後逛逛</div><div class="tl-addr">濟州市區吃吃逛逛 · tote 토트 中央路13길 35</div></div></div></div>
+          <div class="tl-item"><div class="tl-time"><div class="tl-time-label">22:15</div><div class="tl-dot" style="background:var(--coral);box-shadow:0 0 0 2px var(--coral);"></div></div><div class="tl-body"><div class="tl-card depart"><div class="tl-title" style="color:var(--coral);">✈️ 濟州機場 → 台灣</div><div class="tl-addr">建議 20:00 前抵達機場｜旅程愉快！平安返台 🏠</div></div></div></div>
+        </div>
+        <div class="tip">💡 醫美 16:00 是固定行程，之前安排民俗村 ＋ 山君不離，輕鬆不趕時間。機場建議 20:00 前抵達。</div>
+      </div>
+
+      <div class="side-panel">
+        <div class="dark-card">
+          <div class="dark-card-title">🗓️ 最後一天精華</div>
+          <div class="dark-item"><div class="dark-icon">🏘️</div><div><div class="dark-item-name">민속촌 民俗村</div><div class="dark-item-desc">傳統濟州石牆村落文化體驗</div></div></div>
+          <div class="dark-item"><div class="dark-icon">🌲</div><div><div class="dark-item-name">山君不離</div><div class="dark-item-desc">神秘森林步道 · 火山口景觀</div></div></div>
+          <div class="dark-item"><div class="dark-icon">☕</div><div><div class="dark-item-name">Blue Bottle Coffee</div><div class="dark-item-desc">濟州限定咖啡體驗</div></div></div>
+          <div class="dark-item"><div class="dark-icon">🥩</div><div><div class="dark-item-name">黑豬肉一條街</div><div class="dark-item-desc">旅程壓軸美食</div></div></div>
+        </div>
+        <div class="alert-box">
+          <div class="alert-title">⚠️ 返程注意事項</div>
+          <div class="alert-item"><span class="alert-dot">•</span>醫美 16:00 固定行程，請提前預約</div>
+          <div class="alert-item"><span class="alert-dot">•</span>建議 20:00 前抵達濟州機場</div>
+          <div class="alert-item"><span class="alert-dot">•</span>22:15 起飛，準時出發</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════ TIPS -->
+<section id="tips" class="tips-band">
+  <div class="tips-title">✈️ 旅行小貼士</div>
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-icon">🚗</div><div class="tip-name">國際駕照＋台灣駕照</div><div class="tip-desc">開車＆騎車人申請攜帶即可</div></div>
+    <div class="tip-card"><div class="tip-icon">⭐</div><div class="tip-name">★ 選擇標示</div><div class="tip-desc">橘色標示為餐廳/咖啡廳備選，擇一即可</div></div>
+    <div class="tip-card"><div class="tip-icon">🛥️</div><div class="tip-name">牛島渡輪</div><div class="tip-desc">末班船 16:00–17:30，務必把握時間</div></div>
+    <div class="tip-card"><div class="tip-icon">💳</div><div class="tip-name">支付</div><div class="tip-desc">信用卡普及，部分市場仍需現金備用</div></div>
+    <div class="tip-card"><div class="tip-icon">📱</div><div class="tip-name">上網</div><div class="tip-desc">建議購買韓國 SIM 卡或啟用 eSIM</div></div>
+    <div class="tip-card"><div class="tip-icon">🌡️</div><div class="tip-name">五月天氣</div><div class="tip-desc">均溫 16–22°C，帶薄外套以防傍晚涼意</div></div>
+  </div>
+</section>
+
+<div class="footer">旅途愉快！濟州見 🏝️ &nbsp; Jeju is waiting for you ~</div>
+
+</body>
+</html>
